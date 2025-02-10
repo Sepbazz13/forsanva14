@@ -1,0 +1,183 @@
+/* CSS didáctico con temática de San Valentín */
+
+/* Estilo general para el body */
+body {
+    background-image: url("./images/a3.jpg"); /* Reemplaza 'fondo.jpg' con la imagen que desees */
+    background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija el fondo para que no se desplace con el scroll */
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Contenedor principal */
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #ffe6e9; /* Fondo pastel rosado */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.contenedor:hover {
+    transform: scale(1.02);
+}
+
+/* Menú */
+nav {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #ff6f91; /* Rosa intenso */
+    color: white;
+    border-radius: 10px;
+}
+
+nav .menu {
+    margin-right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+nav .menu:hover {
+    transform: rotate(90deg);
+}
+
+nav .mensaje-rotativo {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+    animation: fadeIn 3s infinite alternate;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Contenido del menú desplegable */
+.menu-content {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background: #fff0f5; /* Fondo pastel rosado */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.menu-content.visible {
+    display: block;
+}
+
+.menu-content img {
+    max-width: 200px;
+    margin-bottom: 10px;
+    border: 2px solid #ff6f9100; /* Borde rosa */
+    border-radius: 10%;
+}
+
+.menu-content p {
+    color: #555;
+    font-size: 14px;
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Mensajes aleatorios */
+section.mensajes {
+    margin: 20px 0;
+}
+
+section.mensajes h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #ff6f9100; /* Rosa intenso */
+}
+
+.contenido {
+    display: flex;
+    gap: 20px;
+}
+
+/* Contenedor de la imagen */
+.imagen {
+    flex: 1;
+    background: #ffe6e9; /* Fondo pastel rosado */
+    border-radius: 10px;
+    display: flex;
+    padding: 40px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 210px;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.imagen:hover {
+    transform: scale(1.05);
+}
+
+/* Imagen dentro del contenedor */
+.imagen img {
+    max-width: 100%;
+    border-radius: 10px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.imagen p {
+    color: #ff6f91; /* Rosa intenso */
+    font-style: italic;
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Título y descripción */
+.detalle {
+    flex: 2;
+}
+
+.detalle h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    color: #ff6f91; /* Rosa intenso */
+}
+
+.detalle p {
+    margin: 0;
+    color: #555;
+    line-height: 1.6;
+    transition: color 0.3s ease-in-out;
+}
+
+.detalle p:hover {
+    color: #ff6f91;
+}
